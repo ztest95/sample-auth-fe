@@ -3,33 +3,26 @@ import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Check, Star, Menu } from "lucide-react"
-// import Image from "next/image"
-// import Link from "next/link"
+import { Link } from "react-router-dom"
 
-export default function Component() {
+export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Header */}
       <header className="px-4 lg:px-6 h-14 flex items-center border-b">
-        {/* <Link href="/" className="flex items-center justify-center">
+        <Link to="/" className="flex items-center justify-center">
           <div className="h-8 w-8 bg-primary rounded-md flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">L</span>
+            <span className="text-primary-foreground font-bold text-sm">A</span>
           </div>
-          <span className="ml-2 font-semibold">Logo</span>
-        </Link> */}
+          <span className="ml-2 font-semibold">AuthApp</span>
+        </Link>
         <nav className="ml-auto hidden md:flex gap-4 sm:gap-6">
-          {/* <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-            Features
-          </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-            Pricing
-          </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-            About
-          </Link>
-          <Link href="#" className="text-sm font-medium hover:underline underline-offset-4">
-            Contact
-          </Link> */}
+          <Button variant="ghost" asChild>
+            <Link to="/login">Login</Link>
+          </Button>
+          <Button asChild>
+            <Link to="/register">Sign Up</Link>
+          </Button>
         </nav>
         <Button variant="ghost" size="icon" className="ml-auto md:hidden">
           <Menu className="h-5 w-5" />
@@ -39,7 +32,7 @@ export default function Component() {
       <main className="flex-1">
         {/* Hero Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <Badge variant="secondary" className="mb-4">
@@ -68,7 +61,7 @@ export default function Component() {
 
         {/* Features Section */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Everything You Need</h2>
@@ -115,7 +108,7 @@ export default function Component() {
 
         {/* Social Proof Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Trusted by Industry Leaders</h2>
@@ -167,7 +160,7 @@ export default function Component() {
 
         {/* Testimonials */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">What People Are Saying</h2>
@@ -239,7 +232,7 @@ export default function Component() {
 
         {/* CTA Section */}
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
+          <div className="max-w-7xl mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
                 <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">Ready to Get Started?</h2>
