@@ -61,8 +61,7 @@ export const authAPI = {
 
   // Register user
   register: async (userData: {
-    first_name: string;
-    last_name: string;
+    name: string;
     email: string;
     password: string;
     password_confirmation: string;
